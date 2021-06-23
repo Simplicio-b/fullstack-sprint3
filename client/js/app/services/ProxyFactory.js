@@ -5,7 +5,7 @@ class ProxyFactory {
         // debugger;
         if (props.includes(prop) && ProxyFactory._isFunction(target[prop])) {
           return function () {
-            console.log(`interceptando ${prop}`);
+            // console.log(`interceptando ${prop}`);
             let response = Reflect.apply(target[prop], target, arguments);
 
             action(target);
